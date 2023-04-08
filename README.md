@@ -6,7 +6,8 @@ Whatsapp Link Generator merupakan tools untuk membuat link whatsapp sederhana un
 
 # Hasil pengebangan sederhana
 Saya sudah coba mengembangkannya di blog pribadi, ini hasilnya:
-![image](https://user-images.githubusercontent.com/8088664/230731035-7ce33fa2-1388-492b-a7b1-b1d2b40add47.png)
+![image](https://user-images.githubusercontent.com/8088664/230733459-98db6d07-f8bc-4ff6-8d01-77b34f0449ba.png)
+
 
 Kamu bisa akses melalui: https://www.pojoknarsis.com/p/whatsapp-link-generator.html
 

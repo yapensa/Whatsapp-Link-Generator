@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WhatsApp Link Generator</title>
+  </head>
+  <body>
+    <form>
+      <label for="phone">Nomor Telepon:</label>
+      <input type="tel" id="phone" name="phone" required><br><br>
+      <label for="message">Pesan:</label>
+      <textarea id="message" name="message"></textarea><br><br>
+      <button type="submit">Generate Link</button>
+      <div id="link-container" style="display: none;">
+        <label for="link">Link WhatsApp:</label>
+        <input type="text" id="link" readonly>
+        <button type="button" onclick="copyLink()">Copy Link</button>
+      </div>
+    </form>
+
+    <script>
+      // Fungsi untuk menghasilkan link WhatsApp
+      function generateLink() {
+        // Ambil nomor telepon dan pesan dari input form
+        var phone = document.getElementById("phone").value;
+        var message = document.getElementById("message").value;
+
+        // Buat link WhatsApp dengan nomor dan pesan
+        var link = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+
+        // Tampilkan kotak teks dengan link WhatsApp
+        document.getElementById("link").value = link;
+        document.getElementById("link-container").style.display = "block";
+      }
+
+      // Fungsi untuk menyalin link WhatsApp ke clipboard
+      function copyLink() {
+        var link = document.getElementById("link");
+
+        // Pilih teks di dalam kotak teks
+        link.select();
+
+        // Salin teks ke clipboard
+        document.execCommand("copy");
+
+        // Tampilkan pesan sukses
+        alert("Link berhasil disalin ke clipboard!");
+      }
+
+      // Event listener untuk form submission
+      document.querySelector("form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        generateLink();
+      });
+    </script>
+  </body>
+</html>
